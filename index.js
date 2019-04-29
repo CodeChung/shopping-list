@@ -2,6 +2,7 @@ function addItem() {
   $('#js-shopping-list-form').submit(function(event) {
     event.preventDefault();
     let item = $(this).find('input[name="shopping-list-entry"]').val();
+    $(this).find('input[name="shopping-list-entry"]').val("")
     $('.shopping-list').append(`
       <li>
         <span class="shopping-item">${item}</span>
